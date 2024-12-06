@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.skill-bar {
+  animation: fillSkill 1s ease-in-out forwards;
+}
+
+@keyframes fillSkill {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--skill-width);
+  }
+}
+
+
+/* projects */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+
+/* Contact */
+
+/* Responsive styles */
+@media (max-width: 640px) {
+  h2 {
+    font-size: 3rem; /* Smaller heading on mobile */
+  }
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(107, 114, 128, 0.6); /* Placeholder color */
+}
+
+/* Transition effects */
+input,
+textarea {
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* Adding more styles for form fields */
+input:focus,
+textarea:focus {
+  border-color: #3b82f6; /* Blue border on focus */
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* Shadow effect */
+}
+
+
